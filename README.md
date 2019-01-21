@@ -34,4 +34,4 @@ Now you can use libft.a to compile your project
   
 ### There are no *restrict KEYWORD in function prototypes.
 
-![EVALUATION](https://github.com/CatBraddinton/libft/blob/master/Screen%20Shot%202019-01-16%20at%201.04.50%20PM.png)
+![EVALUATION]https://github.com/CatBraddinton/libft/raw/master/Screen%20Shot%202019-01-16%20at%201.04.50%20PM.png)
