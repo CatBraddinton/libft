@@ -6,7 +6,7 @@
 #    By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/12 15:18:07 by kdudko            #+#    #+#              #
-#    Updated: 2018/11/12 15:19:47 by kdudko           ###   ########.fr        #
+#    Updated: 2019/08/20 17:04:47 by kdudko           ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -29,19 +29,22 @@ SRC := 	ft_atoi.c ft_atoi_base.c ft_bzero.c ft_count_words.c ft_isalnum.c\
 		ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strndup.c\
 		ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c\
 		ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c\
-		get_next_line.c count_digits.c ft_swap.c ft_int_part.c ft_float_part.c\
+		get_next_line.c count_digits.c ft_swap.c
 
-OBJ := $(SRC:.c=.o)
+OBJ := $(SRC:%.c=%.o)
 
 .PHONY: all clean fclean re
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@ar -r $(NAME) $(OBJ)
+	@printf "Creating $(NAME)\n"
+	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
+	@printf "$(NAME) was successfully created\n"
 
 $(OBJ): $(SRC) $(INCS)
+	@printf "Creating object files ...\n"
 	@$(CC) $(FLAGS) -c $(SRC) -I $(INCS)
 
 clean:
