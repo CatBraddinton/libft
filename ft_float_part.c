@@ -1,32 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   ft_float_part.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/11 05:44:30 by kdudko            #+#    #+#             */
-/*   Updated: 2018/12/26 16:09:38 by kdudko           ###   ########.fr       */
+/*   Created: 2019/08/02 20:41:03 by kdudko            #+#    #+#             */
+/*   Updated: 2019/08/02 20:41:06 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-unsigned int	ft_count_words(const char *s, char c)
+float	ft_float_part(double x)
 {
-	unsigned int i;
-	unsigned int words;
-
-	i = 0;
-	words = 0;
-	while (s[i] != '\0')
-	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if (s[i - 1] != c)
-			words++;
-	}
-	return (words);
+	while (x >= 0)
+		x--;
+	x++;
+	return (x);
 }

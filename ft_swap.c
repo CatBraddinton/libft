@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/11 05:44:30 by kdudko            #+#    #+#             */
-/*   Updated: 2018/12/26 16:09:38 by kdudko           ###   ########.fr       */
+/*   Created: 2019/08/02 20:10:17 by kdudko            #+#    #+#             */
+/*   Updated: 2019/08/02 20:10:45 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-unsigned int	ft_count_words(const char *s, char c)
+void	ft_swap(int *a, int *b)
 {
-	unsigned int i;
-	unsigned int words;
+	int	temp;
 
-	i = 0;
-	words = 0;
-	while (s[i] != '\0')
-	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if (s[i - 1] != c)
-			words++;
-	}
-	return (words);
+	temp = *a;
+	*a = *b;
+	*b = temp;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdudko <kdudko@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 15:01:56 by kdudko            #+#    #+#             */
-/*   Updated: 2019/02/16 15:39:38 by kdudko           ###   ########.fr       */
+/*   Created: 2019/08/08 18:19:47 by kdudko            #+#    #+#             */
+/*   Updated: 2019/08/08 18:19:48 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <unistd.h>
 # include <string.h>
 
+# define BUFF_SIZE	128
+# define MAX_FD		256
+
 typedef struct		s_list
 {
 	void			*content;
@@ -24,6 +27,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_atoi_base(const char *c, int base);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dst, const void *src, size_t n);
@@ -83,11 +87,16 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstnew(void const *content, size_t content_size);
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-size_t				ft_count_words(const char *s, char c);
+unsigned int		ft_count_words(const char *s, char c);
 char				*ft_search_and_replace(char *str, char search, \
 														char replace);
 int					ft_isspace(int c);
 char				*ft_strndup(const char *s1, size_t n);
 size_t				ft_strlcpy(char *dst, char const *src, size_t dstsize);
+int					get_next_line(const int fd, char **line);
+int					count_digits(int num);
+void				ft_swap(int *a, int *b);
+int					ft_int_part(double x);
+float				ft_float_part(double x);
 
 #endif

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_words.c                                   :+:      :+:    :+:   */
+/*   count_digits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/11 05:44:30 by kdudko            #+#    #+#             */
-/*   Updated: 2018/12/26 16:09:38 by kdudko           ###   ########.fr       */
+/*   Created: 2019/07/28 02:47:58 by kdudko            #+#    #+#             */
+/*   Updated: 2019/07/28 02:48:02 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_count_words(const char *s, char c)
+int	count_digits(int num)
 {
-	unsigned int i;
-	unsigned int words;
+	int i;
 
 	i = 0;
-	words = 0;
-	while (s[i] != '\0')
+	if (num == 0)
+		return (1);
+	while (num != 0)
 	{
-		while (s[i] == c && s[i] != '\0')
-			i++;
-		while (s[i] != c && s[i] != '\0')
-			i++;
-		if (s[i - 1] != c)
-			words++;
+		num /= 10;
+		i++;
 	}
-	return (words);
+	return (i);
 }
