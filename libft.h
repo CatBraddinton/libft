@@ -96,5 +96,7 @@ size_t				ft_strlcpy(char *dst, char const *src, size_t dstsize);
 int					get_next_line(const int fd, char **line);
 int					count_digits(int num);
 void				ft_swap(int *a, int *b);
+int					ft_int_part(double x);
+float				ft_float_part(double x);
 
 #endif
