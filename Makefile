@@ -15,7 +15,12 @@ NAME = libft.a
 CC := clang
 FLAGS = -Wall -Wextra -Werror
 
-INCS := libft.h
+INC_DIR	:= inc/
+
+INCS := $(INC_DIR)libft.h\
+		$(INC_DIR)get_next_line.h\
+		$(INC_DIR)my_cg_lib.h\
+
 SRC := 	ft_atoi.c ft_atoi_base.c ft_bzero.c ft_count_words.c ft_isalnum.c\
 		ft_isascii.c ft_isdigit.c ft_isprint.c ft_isspace.c ft_itoa.c\
 		ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c\
@@ -29,7 +34,9 @@ SRC := 	ft_atoi.c ft_atoi_base.c ft_bzero.c ft_count_words.c ft_isalnum.c\
 		ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strndup.c\
 		ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strsplit.c\
 		ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c\
-		get_next_line.c count_digits.c ft_swap.c ft_int_part.c ft_float_part.c\
+		get_next_line.c count_digits.c ft_swap.c\
+		\
+		cg_interpolate.c cg_close.c\
 
 OBJ := $(SRC:.c=.o)
 
@@ -48,8 +55,11 @@ $(OBJ): $(SRC) $(INCS)
 	@$(CC) $(FLAGS) -c $(SRC) -I $(INCS)
 
 clean:
-	@rm -rf $(OBJ)
+	@rm -rf $(OBJ) inc/get_next_line.h.gch inc/libft.h.gch inc/my_cg_lib.h.gch
 	@printf "$(NAME) object files removed\n"
+	@printf "get_next_line.h.gch removed\n"
+	@printf "libft.h.gch object removed\n"
+	@printf "my_cg_lib.h.gch object removed\n"
 
 fclean: clean
 	@rm -rf $(NAME)

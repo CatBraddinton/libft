@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "inc/libft.h"
 
 int	count_digits(int num)
 {

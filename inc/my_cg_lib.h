@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_int_part.c                                      :+:      :+:    :+:   */
+/*   my_cg_lib.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 20:37:38 by kdudko            #+#    #+#             */
-/*   Updated: 2019/08/02 20:37:47 by kdudko           ###   ########.fr       */
+/*   Created: 2019/09/28 06:39:12 by kdudko            #+#    #+#             */
+/*   Updated: 2019/09/28 06:39:19 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_int_part(double x)
-{
-	int d;
+#ifndef MY_CG_LIB_H
+# define MY_CG_LIB_H
 
-	d = x;
-	return (d);
-}
+double	interpolate(double start, double end, double interpolation);
+int		close(int keycode);
+
+#endif

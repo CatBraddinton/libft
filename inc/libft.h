@@ -17,9 +17,6 @@
 # include <unistd.h>
 # include <string.h>
 
-# define BUFF_SIZE	128
-# define MAX_FD		256
-
 typedef struct		s_list
 {
 	void			*content;
@@ -93,10 +90,7 @@ char				*ft_search_and_replace(char *str, char search, \
 int					ft_isspace(int c);
 char				*ft_strndup(const char *s1, size_t n);
 size_t				ft_strlcpy(char *dst, char const *src, size_t dstsize);
-int					get_next_line(const int fd, char **line);
 int					count_digits(int num);
 void				ft_swap(int *a, int *b);
-int					ft_int_part(double x);
-float				ft_float_part(double x);
 
 #endif

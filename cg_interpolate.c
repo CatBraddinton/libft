@@ -1,19 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_float_part.c                                    :+:      :+:    :+:   */
+/*   cg_interpolate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/02 20:41:03 by kdudko            #+#    #+#             */
-/*   Updated: 2019/08/02 20:41:06 by kdudko           ###   ########.fr       */
+/*   Created: 2019/09/28 06:36:34 by kdudko            #+#    #+#             */
+/*   Updated: 2019/09/28 06:36:36 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-float	ft_float_part(double x)
+double	interpolate(double start, double end, double interpolation)
 {
-	while (x >= 0)
-		x--;
-	x++;
-	return (x);
+	return (start + ((end - start) * interpolation));
 }

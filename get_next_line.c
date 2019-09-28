@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kdudko <kdudko@student.42.fr>              +#+  +:+       +#+        */
+/*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/05 19:59:32 by kdudko            #+#    #+#             */
-/*   Updated: 2019/07/25 12:50:05 by kdudko           ###   ########.fr       */
+/*   Created: 2019/09/28 06:42:58 by kdudko            #+#    #+#             */
+/*   Updated: 2019/09/28 06:42:59 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "inc/get_next_line.h"
 
 static int	get_one_line(const int fd, char **str, char **line, int read_ret)
 {

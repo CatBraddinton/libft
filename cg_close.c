@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   cg_close.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kdudko <kdudko@student.unit.ua>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 19:07:38 by kdudko            #+#    #+#             */
-/*   Updated: 2018/11/13 19:11:35 by kdudko           ###   ########.fr       */
+/*   Created: 2019/09/28 07:00:06 by kdudko            #+#    #+#             */
+/*   Updated: 2019/09/28 07:00:08 by kdudko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "inc/libft.h"
+#include <stdlib.h>
 
-char	*ft_strcat(char *s1, const char *s2)
+int		close(int keycode)
 {
-	size_t i;
-	size_t j;
-
-	i = 0;
-	j = ft_strlen(s1);
-	while (s2[i])
-		s1[j++] = s2[i++];
-	s1[j] = '\0';
-	return (s1);
+	(void)keycode;
+	exit(EXIT_SUCCESS);
 }
